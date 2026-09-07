@@ -1,0 +1,16 @@
+{
+  "name": "banking-typescript-mini-project",
+  "version": "1.0.0",
+  "description": "A small, framework-free TypeScript banking domain demonstrating core TS concepts relevant to Angular development.",
+  "main": "dist/06-app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/06-app.js",
+    "dev": "tsc && node dist/06-app.js",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.12.7"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  // TOPIC: Compiling TypeScript and tsconfig Basics
+  // See 05-compiling-typescript-and-tsconfig-basics.ts for a full explanation
+  // of what each of these options does and why it matters.
+  "compilerOptions": {
+    "target": "ES2020",              // JavaScript version to compile down to
+    "module": "commonjs",            // module system for the compiled output (Node.js-style)
+    "lib": ["ES2020"],               // built-in type definitions available (Promise, Array methods, etc.)
+    "types": ["node"],               // pull in Node.js globals (console, process, etc.) - see package.json devDependency @types/node
+
+    "rootDir": ".",                  // where source .ts files start from (this flat folder)
+    "outDir": "./dist",              // where compiled .js files are written
+
+    "strict": true,                  // enables all strict type-checking options at once
+    "noImplicitAny": true,           // error on variables/parameters implicitly typed as "any"
+    "strictNullChecks": true,        // null/undefined must be handled explicitly
+    "noUnusedLocals": false,         // set true in a real project to flag unused variables
+    "noUnusedParameters": false,     // set true in a real project to flag unused parameters
+
+    "esModuleInterop": true,         // smooths CommonJS/ES module import differences
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,            // skip type-checking .d.ts library files (faster builds)
+
+    "declaration": false,            // set true to also emit .d.ts type-definition files
+    "sourceMap": true,               // emit .js.map files for easier debugging of compiled output
+
+    "moduleResolution": "node"       // resolve imports the same way Node.js does
+  },
+  "include": [
+    "*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
